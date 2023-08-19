@@ -2,8 +2,8 @@ const client = require("../config/db");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-const signToken = function(id){
-    return jwt.sign({id}, process.env.JWT_SECRET,{
+const signToken = function(id, role){
+    return jwt.sign({id, role}, process.env.JWT_SECRET,{
         expiresIn:process.env.JWT_EXPIRES_IN
     });
 };
@@ -38,7 +38,7 @@ const signup = async (req, res) => {
                 message: 'Please provide all the required fields.',
             });
         }
-        const token = signToken(result.rows[0].id);
+        const token = signToken(result.rows[0].id, role);
         res.status(201).json({
             status: 'success',
             token,
