@@ -101,7 +101,7 @@ const login = async (req, res) => {
             });
         }
 
-        const token = signToken(user.id);
+        const token = signToken(user.id, role);
 
         res.status(200).json({
             status: 'success',
