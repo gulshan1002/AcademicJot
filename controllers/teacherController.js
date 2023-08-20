@@ -44,14 +44,12 @@ const createJournal = async (req, res) => {
             }
             return journalid;
         });
-        // now i want to send all the students an email
         const studentEmails = await db('student')
             .select('email')
             .whereIn('id', students);
         const studentEmailsArray = studentEmails.map(student => student.email);
         console.log(studentEmailsArray);
         const message = `A new journal has been created for you. Please check it out`;
-        // iterate over the studentEmailsArray and send an email to each of them
         for (const email of studentEmailsArray) {
             await sendEmail({
                 email,
