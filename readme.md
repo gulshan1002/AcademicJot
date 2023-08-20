@@ -24,12 +24,6 @@ curl \
 https://toddle-assignment-bksx.onrender.com/api/user/login
 ```
 
-<h3>Export the Token Created at a time of Login</h3>
-
-```
-export TOKEN = Token which you get after Login
-```
-
 Like this we can do for rest of the API's for testing
 
 Postman Collection Link : `https://documenter.getpostman.com/view/21198977/2s9Y5SX69t`
