@@ -10,7 +10,7 @@ const signToken = function(id, role){
 
 const signup = async (req, res) => {
     try {
-        console.log(req.body);
+        // console.log(req.body);
         const { name, email, password, role } = req.body;
         if (!name || !email || !password || !role) {
             return res.status(400).json({
