@@ -1,4 +1,4 @@
-<h1 align="center">Journal App</h1>
+<h1 align="center">AcademicJot</h1>
 <h2>Deployed web server link</h2>
 <a href="https://toddle-assignment-bksx.onrender.com/">Deployed Web Server Link</a>
 <h3>Database Design</h3>
