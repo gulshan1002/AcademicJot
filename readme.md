@@ -1,9 +1,6 @@
 <h1 align="center">Journal App</h1>
 <h2>Deployed web server link</h2>
 <a href="https://toddle-assignment-bksx.onrender.com/">Deployed Web Server Link</a>
-<h2>API Documentation</h2>
-<a href="https://documenter.getpostman.com/view/21198977/2s9Y5SX69t">Postman Collection</a>
-
 <h3>Database Design</h3>
 
 ![alt text](./Screenshots/ER%20Diagram.png)
@@ -23,10 +20,6 @@ curl \
 -H 'Content-Type: application/json' \
 https://toddle-assignment-bksx.onrender.com/api/user/login
 ```
-
-Like this we can do for rest of the API's for testing
-
-Postman Collection Link : `https://documenter.getpostman.com/view/21198977/2s9Y5SX69t`
 
 In test of postman write `pm.environment.set('jwt',pm.response.json().token);` for atumatically picking token from response
 
